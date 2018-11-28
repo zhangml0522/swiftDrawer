@@ -69,7 +69,7 @@ class ViewController: UIViewController {
             
         }else if(sender.state == UIGestureRecognizerState.ended || sender.state == UIGestureRecognizerState.cancelled || sender.state == UIGestureRecognizerState.failed){
             UIView.animate(withDuration: 0.7) {
-                if(x >= 100 || (x >= -100 && x <= 0)){
+                if(frame2.origin.x >= 133){
                     self.state = NowState.open
                     self.mainViewController?.view.transform = CGAffineTransform(translationX: 275, y: 0)
                     self.leftViewController?.view.transform = CGAffineTransform(translationX: 0, y: 0)
